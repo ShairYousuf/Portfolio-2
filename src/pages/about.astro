@@ -1,0 +1,267 @@
+---
+import DefaultLayout from '../components/LayoutDefault.astro';
+
+import DevLogo, { devIcons } from '../components/DevLogo.astro';
+import TimelineItem from "../components/TimelineItem.astro";
+---
+
+<DefaultLayout documentTitle="Experience" documentDescription="I'm Shair, a computer engineering student based in the Canada with 3 internship experiences under my belt.">
+  <section class="container">
+    <h1 class="main-heading text-swipe-animation" id="greeting">
+      <!-- Value inserted via greeting.js -->
+    </h1>
+    <div class="intro">
+      <p>I'm Shair, a computer engineering student based in the Canada with 3 internship experiences under my belt.</p>
+    </div>
+
+    <div class="main-section">
+      <img class="profile-photo" src="/images/profile_pic.png" alt="Shair Yousuf Jahin">
+      <div class="main-section-text">
+        <p>Embarking on a journey as a visionary Software Engineer, I revel in the art of crafting cutting-edge digital solutions that harmoniously blend creativity, technology, and user-centricity.</p>
+        <p>My ardor for learning and a penchant for excellence drive me to master the intricacies of software development, unleashing the potential to create innovative solutions</p>
+        <p>When not lost in the realm of code, you can find me embracing the challenges of swimming, honing my strength in the gym, or unleashing the power of Muay Thai, seeking harmony in both the digital and physical worlds</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee">
+    <div class="marquee-content">
+      {devIcons.map(devIcon => <DevLogo icon={devIcon.title} />)}
+    </div>
+
+    <!-- Logos duplicated for scrolling effect -->
+    <div aria-hidden="true" class="marquee-content">
+      {devIcons.map(devIcon => <DevLogo icon={devIcon.title} />)}
+    </div>
+  </section>
+
+  <section class="container">
+
+    <h2 class="sub-heading">Certification</h2>
+    <div class="timeline-items" style={{ paddingBottom: '20px' }}>
+      <TimelineItem
+      company="Amazon Web Services(AWS)"
+      title="AWS Certified Cloud Practitioner"
+      startDate="January 2023"
+      endDate="January 2026"
+      logo="/images/Amazon_Web_Services_Logo.svg"
+      responsibilities={[
+      ]}
+    />
+    </div>
+
+    <h2 class="sub-heading">Internship Experience</h2>
+
+    <div class="timeline-items" style={{ paddingBottom: '20px' }}>
+      <TimelineItem
+        isCurrent
+        company="National Research Council Canada"
+        workLocation="On-Site"
+        title="Software Engineer Intern"
+        startDate="May 2023"
+        endDate="August 2023"
+        logo="/images/National_Research_Council_(Canada)_logo.svg"
+        responsibilities={[
+          "Created backend API, schemas, database, and models (XML, XMLElementTree, Python, FastAPI, Object Relational Mapping, SQL) for seamless integration with prevalent research data storage classes.",
+          "Produced 3D ship experiment visualizer and test data viewer (WebGL, Three.js, Pandas, Chart.js) on the browser, allowing researchers to relive their experiments and efficiently analyze key events of the experiment.",
+          "Developed a professional user interface (JavaScript, React, Next.js, ChakraUI) tailored for utilization by researchers throughout the National Research Council (NRC) across Canada.",
+          "Identified inefficiencies within existing research processes. Subsequently designed and implemented a novel software application aimed at enhancing the sharing of experimental data and optimizing ancillary research procedures"
+        ]}
+      />
+
+      <TimelineItem
+        company="Nasdaq — Verafin Inc."
+        workLocation="Hybrid"
+        title="Full-Stack Developer Intern"
+        startDate="September 2022"
+        endDate="December 2022"
+        logo="/images/Verafin.jpeg"
+        responsibilities={[
+          "Improved existing cost-tracking processes (Java, Javascript, SQL). Saved clients 10h of work and $100,000 in labor costs.",
+          "Automated testing for back-end server database (Java, Selenium) and front-end (Javascript, Karma).",
+          "Solved 13+ customer cases and bugs (JavaScript, Java, SQL, PostgreSQL). Coordinated with customers and contributed to increased customer satisfaction and team success.",
+          "Performed QA testing on new software features.",
+          "Used Salesforce, GitHub, and Confluence to coordinate with team members. Used Linux and MacOS dev environments."
+        ]}
+      />
+
+      <TimelineItem
+        company="Avalon Holographics"
+        workLocation="Hybrid"
+        title="Software Developer Intern"
+        startDate="September 2021"
+        endDate="December 2021"
+        logo="/images/AHLogo.png"
+        responsibilities={[
+          "Developed runtime segmentation functionality (C++, Unreal Engine, OpenGL, HLSL Shaders) for CT scans. Allows radiologists to easily analyze tumors, cancers, abscesses, etc.",
+          "Implemented new UI/UX features (C++, Unreal Engine, custom hologram API). Transformed holographic application from keyboard-based to mouse-based controls for drastically improved user experience.",
+          "Used linear algebra techniques to transform 2D mouse position into 3D space to manipulate holographic models.",
+          "End of work term report on graphics pipeline and techniques used to render holographic visuals.",
+          "Used BitBucket, Jira, and Confluence for agile software development.",
+        ]}
+      />
+    </div>
+
+    <h2 class="sub-heading">Volunteering  Experience</h2>
+
+    <div class="timeline-items" style={{ paddingBottom: '20px' }}>
+      <TimelineItem
+        isCurrent
+        company="Memorial University of Newfoundland Student Union (MUNSU)"
+        workLocation="Hybrid"
+        title="Engineering Student Representative"
+        startDate="May 2023"
+        logo="/images/munsu.jpg"
+        responsibilities={[
+          "Represent the engineering student body at the MUNSU council meetings.",
+        ]}
+      />
+
+      <TimelineItem
+        isCurrent
+        company="Canadian Federation of Engineering Students (CFES)"
+        workLocation="Hybrid"
+        title="VP Sponsorship for Canadian Engineering Leadership Conference (CELC) 2024"
+        startDate="May 2023"
+        logo="/images/CFES.png"
+        responsibilities={[
+          "Reach out to potential sponsors and arranged meetings to discuss/negotiate the sponsorship opportunity.",
+          "lead my own volunteer team, arranged sprint meetings, and produced sponsorship agreements and other relevant documents.",
+        ]}
+      />
+
+      <TimelineItem
+        company="Canadian Federation of Engineering Students (CFES)"
+        workLocation="Hybrid"
+        title="Corporate Relations Commissioner (CRC)"
+        startDate="May 2022"
+        endDate='April 2023'
+        logo="/images/CFES.png"
+        responsibilities={[
+          "Acquired additional $15,000 in yearly funding through numerous partnership contract negotiations.",
+          "Interviewed and evaluated corporate partners for Lean 6 Sigma National Conference.",
+          "Consulted and mentored sponsorship teams of 4 National Conferences.",
+          "Managed the cooperative relationships with existing corporate partners (Engineering Canada, Association of Consulting Engineering Companies, Ontario Society of Professional Engineers).",
+        ]}
+      />
+      <TimelineItem
+        company="Paradigm Engineering(club)"
+        workLocation="On-Site"
+        title="Software Developer"
+        startDate="September 2022"
+        endDate='December 2022'
+        logo="/images/paradigm.jpeg"
+        responsibilities={[
+          "Developed the Control Laptop GUI (JavaScript, TypeScript, Angular) for quick monitoring of the hardware systems.",
+        ]}
+      />
+
+      <TimelineItem
+        company="Canadian Federation of Engineering Students (CFES)"
+        workLocation="Hybrid"
+        title="VP Sponsorship for Canadian Engineering Leadership Conference (CELC) 2023"
+        startDate="September 2022"
+        endDate='December 2022'
+        logo="/images/CFES.png"
+        responsibilities={[
+          "Obtained $50,000 in 4 months as VP sponsorship for Canadian Engineering Leadership Conference (CELC) 2022.",
+          "Reached out to potential sponsors and arranged meetings to discuss/negotiate the sponsorship opportunity.",
+          "lead my own volunteer team, arranged sprint meetings, and produced sponsorship agreements and other relevant documents.",
+        ]}
+      />
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  .main-section {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    align-items: center;
+    color: var(--color-silver-800);
+  }
+
+  .profile-photo {
+    width: 200px;
+  }
+
+  /* Marquee styles */
+  .marquee {
+    --gap: 1.5rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    margin: 3.5rem 0;
+    &:hover {
+      .marquee-content {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  .marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 30s linear infinite reverse;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  /* Pause animation when reduced-motion is set */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-content {
+      animation-play-state: paused !important;
+    }
+  }
+
+  .sub-heading {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: var(--color-silver-800);
+  }
+
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0rem;
+  }
+
+
+  @media screen and (max-width: 980px) {
+    .main-section {
+      gap: 1rem;
+      display: block;
+      word-break: break-word;
+    }
+
+    .profile-photo {
+      float: left;
+      width: 152px;
+      margin: 10px;
+    }
+
+    :global(.devicon) {
+      width: 45px !important;
+      height: 45px !important;
+    }
+  }
+</style>
+
+<script hoist>
+  import { greeting } from "../js/greeting";
+  const greetingContainer = document.getElementById("greeting");
+  greetingContainer.innerText = greeting();
+</script>

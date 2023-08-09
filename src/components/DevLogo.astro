@@ -1,0 +1,68 @@
+---
+import type { Skills } from '../types';
+
+export const devIcons: { title: Skills, filePath: string }[] = [
+  { "title": "JavaScript", "filePath": "/images/dev-logos/javascript.svg" },
+  { "title": "TypeScript", "filePath": "/images/dev-logos/typescript.svg" },
+  { "title": "React", "filePath": "/images/dev-logos/react.svg" },
+  { "title": "Next.js", "filePath": "/images/dev-logos/nextjs.png" },
+  { "title": "Astro", "filePath": "/images/dev-logos/astro.png" },
+  { "title": "Node.js", "filePath": "/images/dev-logos/nodejs.svg" },
+  { "title": "HTML", "filePath": "/images/dev-logos/html.svg" },
+  { "title": "CSS", "filePath": "/images/dev-logos/css.svg" },
+  { "title": "Python", "filePath": "/images/dev-logos/python.svg" },
+  { "title": "PostgreSQL", "filePath": "/images/dev-logos/postgresql.svg" },
+  { "title": "MySQL", "filePath": "/images/dev-logos/mysql.svg" },
+  { "title": "Selenium", "filePath": "/images/dev-logos/selenium.svg" },
+  { "title": "Linux", "filePath": "/images/dev-logos/linux.svg" },
+  { "title": "Docker", "filePath": "/images/dev-logos/docker.svg" },
+  { "title": "AWS", "filePath": "/images/dev-logos/aws.svg" },
+  { "title": "Git", "filePath": "/images/dev-logos/git.svg" },
+  { "title": "Matplotlib", "filePath": "/images/dev-logos/Matplotlib_icon.svg"},
+  { "title": "PyTorch", "filePath": "/images/dev-logos/PyTorch_logo_black.svg"},
+  { "title": "Pandas", "filePath": "/images/dev-logos/Pandas_logo.svg"},
+  { "title": "Numpy", "filePath": "/images/dev-logos/NumPy_logo_2020.svg" },
+  { "title": "SQLAlchemy", "filePath": "/images/dev-logos/SQLAlchemy.svg" },
+  { "title": "SQLite", "filePath": "/images/dev-logos/SQLite370.svg" },
+  { "title": "FastAPI", "filePath": "/images/dev-logos/fastapi-seeklogo.com.svg" },
+  { "title": "Chakra UI", "filePath": "/images/dev-logos/chakra_ui.png" },
+  { "title": "C++", "filePath": "/images/dev-logos/ISO_C++_Logo.svg" },
+  { "title": "JSON", "filePath": "/images/dev-logos/json.svg" },
+];
+
+interface Props {
+  icon: Skills;
+  size?: number;
+}
+
+const { icon, size = 60 } = Astro.props;
+
+const logo = devIcons.find(devIcon => devIcon.title === icon);
+
+if (!logo) {
+  throw new Error(`${icon} does not exist in devIcons`);
+}
+---
+
+<img
+  class="devicon"
+  src={logo.filePath}
+  alt={logo.title}
+  title={logo.title}
+  width={size + "px"}
+  height={size + "px"}
+/>
+
+<script>
+  import tippy, { createSingleton } from 'tippy.js';
+
+  const tippyInstances = tippy(".devicon", {
+    content: (reference: any) => reference.getAttribute("title"),
+  });
+
+  const singleton = createSingleton(tippyInstances, {
+    moveTransition: 'transform 0.2s ease-out',
+  });
+
+  singleton.enable();
+</script>

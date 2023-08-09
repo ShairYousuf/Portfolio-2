@@ -1,0 +1,68 @@
+:root {
+  /*
+    Color shades generated using:
+    https://mdigi.tools/color-shades
+  */
+
+  --color-mint: #361500;  
+  --color-mint-50: #ddd0c0;
+  --color-mint-100: #cfc3b2;
+  --color-mint-200: #c2b6a3;
+  --color-mint-300: #b4a894; 
+  --color-mint-400: #a69b86;
+  --color-mint-500: #4c3b2a;
+  --color-mint-600: #402f22;
+  --color-mint-700: #35241a;
+  --color-mint-800: #2a1811;
+  --color-mint-900: #200d08;
+
+--color-orange: #270000;
+--color-orange-50: #f2d9d9;  
+--color-orange-100: #e9c4c4;
+--color-orange-200: #e0afaf;
+--color-orange-300: #d79b9b;
+--color-orange-400: #cd8686;
+--color-orange-500: #c67171;
+--color-orange-600: #a45959;
+--color-orange-700: #834141;  
+--color-orange-800: #612929;
+--color-orange-900: #401111;  
+
+--color-silver: #1c140e;
+--color-silver-50: #71523d;  
+--color-silver-100: #5e453C;
+--color-silver-200: #4b3830;
+--color-silver-300: #392b25;
+--color-silver-400: #271d19;
+--color-silver-500: #1c140e;
+--color-silver-600: #180f09;
+--color-silver-700: #140b05;
+--color-silver-800: #100602;
+--color-silver-900: #0c0200;
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px, base */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.75rem;  /* 28px */
+  --font-size-4xl: 2rem;     /* 32px */
+  --font-size-5xl: 2.25rem;  /* 36px */
+  --font-size-6xl: 2.5rem;   /* 40px */
+  --font-size-7xl: 2.75rem;  /* 44px */
+  --font-size-8xl: 3rem;     /* 48px */
+  --font-size-9xl: 3.25rem;  /* 52px */
+  --font-size-10xl: 3.5rem;  /* 56px */
+  --font-size-11xl: 3.75rem; /* 60px */
+  --font-size-12xl: 4rem;    /* 64px */
+  --font-size-13xl: 4.25rem; /* 68px */
+  --font-size-14xl: 4.5rem;  /* 72px */
+  --font-size-15xl: 4.75rem; /* 76px */
+  --font-size-16xl: 5rem;    /* 80px */
+
+  /* Font Family */
+  --font-family-IBM-Plex-Mono: 'IBM Plex Mono', sans-serif;
+  --font-family-Mukta: 'Mukta', sans-serif;
+}
