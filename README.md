@@ -1,4 +1,4 @@
-## [shairyousuf.jahin.me](https://shairyousufjahin.me/)
+## [shairyousufjahin.me](https://shairyousufjahin.me/)
 Source Code for my portfolio website. Built with [Astro](https://astro.build)
 
 ## 🧞 Commands
